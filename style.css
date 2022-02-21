@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(223, 223, 223);
+    min-height: 100vh;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.clock{
+    position: relative;
+    width: 250px;
+    height: 250px;
+
+    border: thin solid black;
+    border-radius: 100%;
+
+    cursor: pointer;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+
+    transform: scale(1.5);
+}
+.hour{
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+
+    width: 1px;
+    height: 90px;
+
+    background-color: black;
+
+    transform-origin: bottom;
+    transform: rotate(150deg);
+}
+.minute{
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+
+    width: 1px;
+    height: 115px;
+
+    background-color: black;
+
+    transform-origin: bottom;
+    transform: rotate(30deg);
+}
+/* .second{
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+
+    width: 1px;
+    height: 110px;
+
+    background-color: red;
+
+    transform-origin: bottom;
+    transform: rotate(90deg);
+} */
+.numbers{
+    opacity: 0;
+    transition: .3s;
+}
+.clock:hover .numbers{
+    opacity: 100%;
+}
+.numbers p{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-weight: 100;
+}
+
+.one{
+    right: 59px;
+    top: calc(8%);
+}
+.two{
+    right: 20px;
+    top: calc(24%);
+}
+.three{
+    right: 0;
+    top: calc(50% - 10px);
+}
+.four{
+    right: 20px;
+    bottom: calc(24%);
+}
+.five{
+    right: 59px;
+    bottom: calc(8%);
+}
+.six{
+    bottom: 0;
+    left: calc(50% - 10px);
+}
+.seven{
+    left: 59px;
+    bottom: calc(8%);
+}
+.eight{
+    left: 20px;
+    bottom: calc(24%);
+}
+.nine{
+    left: 0;
+    top: calc(50% - 10px);
+}
+.ten{
+    left: 59px;
+    top: calc(8%);
+}
+.eleven{
+    left: 20px;
+    top: calc(24%);
+}
+.twelven{
+    top: 0;
+    left: calc(50% - 10px);
+}
+
+.timeText{
+    font-weight: 100;
+    font-size: 40px;
+    text-align: center;
+}
